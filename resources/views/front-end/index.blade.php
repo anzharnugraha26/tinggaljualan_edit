@@ -582,4 +582,18 @@
 )
 </script>
 @endif
+
+@if(Auth::check())
+@if(Auth::user()->email_verified_at==null)
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Anda belum verifikasi Email',
+            text: 'Silahkan Verifikasi email anda terlebih dahulu',
+            // text: 'Silahkan Login atau Register untuk melanjutkan !!',
+        })
+    </script>
+@endif
+@endif
+
 @endsection
