@@ -25,10 +25,9 @@
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
                 <div class="main_title">
-                    <h2>service offers </h2>
+                    <h2>SOLUSI STARTUP ALL IN ONE! </h2>
                     <p>
-                        Is give may shall likeness made yielding spirit a itself togeth created 
-                        after sea <br> is in beast beginning signs open god you're gathering ithe
+                        Kami dapat membantu semua kebutuhan desain startup Anda yang dirangkum dalam 8 kategori.
                     </p>
                 </div>
             </div>
@@ -40,8 +39,8 @@
                 <a href="{{url("/service-detail/$item->id")}}">
                 <div class="feature_item">
                     <img src="{{asset('/img/services/'.$item->image)}}" alt="">
-                    <h4>{{$item->name}}</h4>
-                    <p style="color: black">Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+                 
+                    <h4>{{$item->name}}</h4><label style="color: black">Paket ini ditujukan bagi Anda yang baru memulai usaha. Anda akan mendapatkan logo, kartu nama, kop surat, dan lainnya.</label></p>
                 </div>
                 </a>
             </div>

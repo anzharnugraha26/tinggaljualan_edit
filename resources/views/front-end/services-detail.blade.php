@@ -26,9 +26,9 @@
     <div class="container">
         <div class="portfolio_details_inner">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" style="padding-top: 80px">
                     <div class="left_img">
-                        <img class="img-fluid" src="{{asset('front-master/img/portfolio/portfolio-details.jpg')}}" alt="">
+                        <img class="img-fluid" src="{{asset('img/services/'.$categories->icon_detail)}}" alt="">
                     </div>
                 </div>
                 <div class="offset-lg-1 col-lg-5" style="margin-top: 20px">
@@ -49,23 +49,13 @@
             </div>
             <p>Tinggaljualan.com akan membantu semua kebutuhan anda dimulai dari pembuatan produk kecantikan sampai dengan mempersiapkan kebutuhan marketing online anda hanya dengan klik tinggaljualan.com.</p>
             <div class="row">
-                <div class="col-lg-2" style="margin-top:10px">
-                    <p><img src="{{asset("img/services/t1.png")}}" width="164px" height="95px"></p>
-                </div> 
-                <div class="col-lg-2" style="margin-top:10px">
-                    <p><img src="{{asset("img/services/t2.png")}}" width="164px" height="95px"></p>
-                </div> 
-                <div class="col-lg-2" style="margin-top:10px">
-                    <p><img src="{{asset("img/services/t3.png")}}" width="164px" height="95px"></p>
-                </div> 
-                <div class="col-lg-2" style="margin-top:10px">
-                    <p><img src="{{asset("img/services/t4.png")}}" width="164px" height="95px"></p>
-                </div> 
-                <div class="col-lg-2" style="margin-top:10px">
-                    <p><img src="{{asset("img/services/t5.png")}}" width="164px" height="95px"></p>
-                </div> 
-                <div class="col-lg-2" style="margin-top:10px">
-                    <p><img src="{{asset("img/services/t6.png")}}" width="164px" height="95px"></p>
+                <div class="col-lg-12" style="margin-top:10px;margin-left:50px ">
+                    <img src="{{asset("img/services/t1.png")}}" width="164px" height="95px" style="margin-top: 25px">
+                    <img src="{{asset("img/services/t2.png")}}" width="164px" height="95px" style="margin-top: 25px">
+                    <img src="{{asset("img/services/t3.png")}}" width="164px" height="95px" style="margin-top: 25px">
+                    <img src="{{asset("img/services/t4.png")}}" width="164px" height="95px" style="margin-top: 25px">
+                    <img src="{{asset("img/services/t5.png")}}" width="164px" height="95px" style="margin-top: 25px">
+                    <img src="{{asset("img/services/t6.png")}}" width="164px" height="95px" style="margin-top: 25px">
                 </div> 
             </div>
             
@@ -114,7 +104,7 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-10">
-                <div class="subscription_box text-center">
+                <div class="subscription_box text-center col-lg-12">
                     <h2 class="text-uppercase text-white">Order Paket Startup</h2>
                     <p>
                         Masukkan informasi Anda dibawah ini untuk memesan Paket Startup. Tim kami akan segera menghubungi Anda 
