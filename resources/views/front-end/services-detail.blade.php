@@ -31,7 +31,7 @@
                         <img class="img-fluid" src="{{asset('front-master/img/portfolio/portfolio-details.jpg')}}" alt="">
                     </div>
                 </div>
-                <div class="offset-lg-1 col-lg-5">
+                <div class="offset-lg-1 col-lg-5" style="margin-top: 20px">
                     <div class="portfolio_right_text mt-30">
                         <h4 class="text-uppercase">{{$categories->name}}</h4>
                         <p>
