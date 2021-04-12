@@ -132,6 +132,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{url("admin/categories")}}" class="nav-link  {{ 'admin/categories' == request()->path()? 'active' : ''}}">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+                Edit Categories
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{url("admin/blog")}}" class="nav-link  {{ 'admin/blog' == request()->path()? 'active' : ''}}">
               <i class="nav-icon far fa-image"></i>
               <p>

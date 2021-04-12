@@ -32,5 +32,6 @@ Route::group(['middleware' => ['auth', 'checkRole:admin']], function () {
     Route::get('/admin/blog/create-content-blog', 'BlogController@create');
     Route::post('/saveblog', 'BlogController@store');
     Route::post('/save/category', 'BlogController@saveCat');
+    Route::get('/admin/categories', 'BackEndController@categories');
 });
 Route::get('/logout', 'HomeController@logout');

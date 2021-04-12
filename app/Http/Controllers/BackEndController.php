@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
+use App\Category;
 use App\Contact;
 use App\Order;
 use Illuminate\Http\Request;
@@ -31,6 +32,11 @@ class BackEndController extends Controller
     public function blog(){
         $blog = Blog::all();
         return view('admin.blog.daftar', compact('blog'));
+    }
+
+    public function categories(){
+        $cat = Category::all();
+        return view('admin.categories.index', compact('cat'));
     }
 
     public function store(Request $request)
