@@ -31,6 +31,8 @@
   <link rel="stylesheet" href="{{asset('lte/plugins/toastr/toastr.min.css')}}">
 
   <link rel="stylesheet" href="{{asset('lte/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+  <link rel="stylesheet" href="{{asset('lte/plugins/select2/css/select2.min.css')}}">
+  <link rel="stylesheet" href="{{asset('lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -216,6 +218,9 @@
 <script src="{{asset('lte/plugins/datatables/jquery.dataTables.js')}}"></script>
 <script src="{{asset('lte/plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+<script src="{{asset('lte/plugins/select2/js/select2.full.min.js')}}"></script>
+
 @yield('script')
 </body>
 </html>

@@ -49,22 +49,22 @@
             </div>
             <p>Tinggaljualan.com akan membantu semua kebutuhan anda dimulai dari pembuatan produk kecantikan sampai dengan mempersiapkan kebutuhan marketing online anda hanya dengan klik tinggaljualan.com.</p>
             <div class="row">
-                <div class="col-lg-2">
+                <div class="col-lg-2" style="margin-top:10px">
                     <p><img src="{{asset("img/services/t1.png")}}" width="164px" height="95px"></p>
                 </div> 
-                <div class="col-lg-2">
+                <div class="col-lg-2" style="margin-top:10px">
                     <p><img src="{{asset("img/services/t2.png")}}" width="164px" height="95px"></p>
                 </div> 
-                <div class="col-lg-2">
+                <div class="col-lg-2" style="margin-top:10px">
                     <p><img src="{{asset("img/services/t3.png")}}" width="164px" height="95px"></p>
                 </div> 
-                <div class="col-lg-2">
+                <div class="col-lg-2" style="margin-top:10px">
                     <p><img src="{{asset("img/services/t4.png")}}" width="164px" height="95px"></p>
                 </div> 
-                <div class="col-lg-2">
+                <div class="col-lg-2" style="margin-top:10px">
                     <p><img src="{{asset("img/services/t5.png")}}" width="164px" height="95px"></p>
                 </div> 
-                <div class="col-lg-2">
+                <div class="col-lg-2" style="margin-top:10px">
                     <p><img src="{{asset("img/services/t6.png")}}" width="164px" height="95px"></p>
                 </div> 
             </div>
@@ -142,11 +142,12 @@
                             <div class="col">
                                 <select class="form-control" id="exampleFormControlSelect1" aria-placeholder="Pilihan Paket"  name="paket">
                                     {{-- <option value="{{$categories->name}}">{{$categories->name}}</option> --}}
-                                    <option {{($categories->name) == '1' ? 'selected' : ''}} value="1">1</option>
-                                    <option {{($categories->name) == 'Digital Marketing' ? 'selected' : ''}} value="Digital Marketing">Digital Marketing</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option {{($categories->name) == 'Paket Startup Bronze' ? 'selected' : ''}} value="Paket Startup Bronze">Paket Startup Bronze</option>
+                                    <option {{($categories->name) == 'Paket Startup Silver' ? 'selected' : ''}} value="Paket Startup Silver">Paket Startup Silver</option>
+                                    <option {{($categories->name) == 'Paket Startup Gold' ? 'selected' : ''}}   value="Paket Startup Gold">Paket Startup Gold</option>
+                                    <option {{($categories->name) == 'Paket Starup Platinum' ? 'selected' : ''}} value="Paket Starup Platinum">Paket Starup Platinum</option>
+                                    <option {{($categories->name) == 'Paket Website Company Profile' ? 'selected' : ''}} value="Paket Website Company Profile">Paket Website Company Profile</option>
+                                    <option {{($categories->name) == 'Paket Website Toko Online' ? 'selected' : ''}} value="Paket Website Toko Online">Paket Website Toko Online</option>
                                 </select>
                             </div>
                             <div class="col">

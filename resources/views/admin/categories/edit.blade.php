@@ -1,18 +1,18 @@
 @extends('layout.back-end')
 @section('title')
-   Blog 
+   Edit Category 
 @endsection
 @section('content')
 <div class="content-wrapper">
 
-  <form method="POST" action="{{url("/saveblog")}}" enctype="multipart/form-data">
+  <form method="POST" action="{{url("/admin/categories/update/$cat->id")}}" enctype="multipart/form-data">
     @csrf
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1><button>Save Content</button></h1>
+            <h1><button>Update Category</button></h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -49,33 +49,9 @@
                 <div class="card-body">
                 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Judul</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="judul">
+                    <label for="exampleInputEmail1">Name Category</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="name" value="{{$cat->name}}">
                   </div>
-                
-                  
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Kategori</label>
-                    <select class="form-control" name="category_id">
-                      @foreach ($categories as $item)
-                        <option value="{{$item->id}}">{{$item->name}}</option>
-                          
-                      @endforeach
-                    </select>
-                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputFile">Image</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile" name="image">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="">Upload</span>
-                      </div>
-                    </div>
-                  </div>
-                
                 </div>
               </div>
            
@@ -112,7 +88,7 @@
             <div class="card-body pad">
               <div class="mb-3">
                 <textarea class="textarea" placeholder="Place some text here"
-                          style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name="content"></textarea>
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name="description">{!!$cat->description!!}</textarea>
               </div>
               <p class="text-sm mb-0">
                 Editor <a href="https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg">Documentation and license
@@ -127,12 +103,4 @@
     </section>
   </form>
   </div>
-@endsection
-
-@section('script')
-    <script>
-      $(function () {
-
-      })
-    </script>
 @endsection

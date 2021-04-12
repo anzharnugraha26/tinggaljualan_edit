@@ -12,7 +12,12 @@ class Blog extends Model
     ];
 
     public function category(){
-        return $this->BelongsTo(CategoryBlog::class);
+        return $this->belongsTo(CategoryBlog::class);
     }
 
+    public function tags(){
+        return $this->belongsToMany(TagBlog::class);
+    }
+    
+    
 }

@@ -51,15 +51,17 @@ class BackEndController extends Controller
     }
 
 
-    public function edit($id)
+    public function categoriesUpdate($id)
     {
-        //
+        $cat = Category::find($id);
+        return view('admin.categories.edit', compact('cat'));
     }
 
 
     public function update(Request $request, $id)
     {
-        //
+        Category::find($id)->update(array_merge($request->all(),['description' => $request->input('description')]));
+        return redirect('admin/categories');
     }
 
 
