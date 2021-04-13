@@ -187,8 +187,8 @@
 				<div class="col-lg-3 col-md-6">	
 					<a href="{{url("/service-detail/$item->id")}}">
 					<div class="feature_item">
-						<img src="{{asset('/img/services/'.$item->image)}}" alt="">
-						<h4>{{$item->name}}</h4><label style="color: black">Paket ini ditujukan bagi Anda yang baru memulai usaha. Anda akan mendapatkan logo, kartu nama, kop surat, dan lainnya.</label></p>
+						<img src="{{asset('/img/services/'.$item->image)}}" alt="" width="150px" height="150px">
+						<h4>{{$item->name}}</h4><label style="color: black">{{$item->title}}</label></p>
 					</div>
 					</a>
 				</div>
@@ -257,12 +257,13 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="main_title text-left">
-						<h2>quality work <br>
-							Recently done project </h2>
+						<h2>Good Design | Good Idea | Good Business<br>
+						 </h2>
+						 <h3>Start Your Business with us!</h3>
 					</div>
 				</div>
 			</div>
-			<div class="filters portfolio-filter">
+			{{-- <div class="filters portfolio-filter">
 				<ul>
 					<li class="active" data-filter="*">all</li>
 					<li data-filter=".popular">popular</li>
@@ -270,67 +271,67 @@
 					<li data-filter=".following">following</li>
 					<li data-filter=".upcoming">upcoming</li>
 				</ul>
-			</div>
+			</div> --}}
 	
 			<div class="filters-content">
 				<div class="row portfolio-grid justify-content-center">
 					<div class="col-lg-4 col-md-6 all latest">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{{asset('front-master/img/portfolio/p1.jpg')}}" alt="">
+								<img class="img-fluid w-100" src="{{asset('/img/portfolio/1.jpg')}}" alt="">
 								<div class="overlay"></div>
-								<a href="{{asset('front-master/img/portfolio/p1.jpg')}}" class="img-gal">
+								<a href="{{asset('/img/portfolio/1.jpg')}}" class="img-gal">
 									<div class="icon">
 										<span class="lnr lnr-cross"></span>
 									</div>
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">minimal design</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="portfolio-details.html">Web Responsive</a></h4>
+								<p>tinggaljualan.com, portfolio</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6 all popular">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{{asset('front-master/img/portfolio/p2.jpg')}}" alt="">
+								<img class="img-fluid w-100" src="{{asset('/img/portfolio/2.jpg')}}" alt="">
 								<div class="overlay"></div>
-								<a href="{{asset('front-master/img/portfolio/p2.jpg')}}" class="img-gal">
+								<a href="{{asset('/img/portfolio/2.jpg')}}" class="img-gal">
 									<div class="icon">
 										<span class="lnr lnr-cross"></span>
 									</div>
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">Paint wall</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="portfolio-details.html">online shop website</a></h4>
+								<p>tinggaljualan.com, portfolio</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6 all latest">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{{asset('front-master/img/portfolio/p3.jpg')}}" alt="">
+								<img class="img-fluid w-100" src="{{asset('/img/portfolio/3.jpg')}}" alt="">
 								<div class="overlay"></div>
-								<a href="{{asset('front-master/img/portfolio/p3.jpg')}}" class="img-gal">
+								<a href="{{asset('/img/portfolio/3.jpg')}}" class="img-gal">
 									<div class="icon">
 										<span class="lnr lnr-cross"></span>
 									</div>
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">female light</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="portfolio-details.html">Company Profile Web</a></h4>
+								<p>tinggaljualan.com, portfolio</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6 all popular">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{{asset('front-master/img/portfolio/p4.jpg')}}" alt="">
+								<img class="img-fluid w-100" src="{{asset('/img/portfolio/4.jpeg')}}" alt="">
 								<div class="overlay"></div>
-								<a href="{{asset('front-master/img/portfolio/p4.jpg')}}" class="img-gal">
+								<a href="{{asset('/img/portfolio/4.jpeg')}}" class="img-gal">
 									<div class="icon">
 										<span class="lnr lnr-cross"></span>
 									</div>
@@ -345,9 +346,9 @@
 					<div class="col-lg-4 col-md-6 all following">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{{asset('front-master/img/portfolio/p6.jpg')}}" alt="">
+								<img class="img-fluid w-100" src="{{asset('/img/portfolio/5.jpeg')}}" alt="">
 								<div class="overlay"></div>
-								<a href="{{asset('front-master/img/portfolio/p5.jpg')}}" class="img-gal">
+								<a href="{{asset('/img/portfolio/5.jpeg')}}" class="img-gal">
 									<div class="icon">
 										<span class="lnr lnr-cross"></span>
 									</div>
@@ -362,9 +363,9 @@
 					<div class="col-lg-4 col-md-6 all upcoming">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{{asset('front-master/img/portfolio/p5.jpg')}}" alt="">
+								<img class="img-fluid w-100" src="{{asset('/img/portfolio/6.jpeg')}}" alt="">
 								<div class="overlay"></div>
-								<a href="{{asset('front-master/img/portfolio/p6.jpg')}}" class="img-gal">
+								<a href="{{asset('/img/portfolio/6.jpeg')}}" class="img-gal">
 									<div class="icon">
 										<span class="lnr lnr-cross"></span>
 									</div>
@@ -379,9 +380,9 @@
 					<div class="col-lg-4 col-md-6 all upcoming following">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{{asset('front-master/img/portfolio/p7.jpg')}}" alt="">
+								<img class="img-fluid w-100" src="{{asset('/img/portfolio/7.jpeg')}}" alt="">
 								<div class="overlay"></div>
-								<a href="{{asset('front-master/img/portfolio/p7.jpg')}}" class="img-gal">
+								<a href="{{asset('/img/portfolio/7.jpeg')}}" class="img-gal">
 									<div class="icon">
 										<span class="lnr lnr-cross"></span>
 									</div>
@@ -396,9 +397,9 @@
 					<div class="col-lg-4 col-md-6 all following">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{{asset('front-master/img/portfolio/p8.jpg')}}" alt="">
+								<img class="img-fluid w-100" src="{{asset('/img/portfolio/8.jpg')}}" alt="">
 								<div class="overlay"></div>
-								<a href="{{asset('front-master/img/portfolio/p8.jpg')}}" class="img-gal">
+								<a href="{{asset('/img/portfolio/8.jpg')}}" class="img-gal">
 									<div class="icon">
 										<span class="lnr lnr-cross"></span>
 									</div>
@@ -413,9 +414,9 @@
 					<div class="col-lg-4 col-md-6 all upcoming">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="{{asset('front-master/img/portfolio/p9.jpg')}}" alt="">
+								<img class="img-fluid w-100" src="{{asset('/img/portfolio/9.jpg')}}" alt="">
 								<div class="overlay"></div>
-								<a href="{{asset('front-master/img/portfolio/p9.jpg')}}" class="img-gal">
+								<a href="{{asset('/img/portfolio/9.jpg')}}" class="img-gal">
 									<div class="icon">
 										<span class="lnr lnr-cross"></span>
 									</div>
@@ -434,7 +435,7 @@
 	<!--================End Portfolio Area =================-->
 
 	<!--================ Start Testimonial Area =================-->
-	<div class="testimonial_area section_gap_bottom">
+	{{-- <div class="testimonial_area section_gap_bottom">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-8 text-center">
@@ -528,7 +529,7 @@
         		</div>
 			</div>
 		</div>
-	</div>
+	</div> --}}
 	<!--================ End Testimonial Area =================-->
 
 	<!--================ Start Newsletter Area =================-->
