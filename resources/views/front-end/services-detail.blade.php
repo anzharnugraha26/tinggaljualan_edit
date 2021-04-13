@@ -129,7 +129,7 @@
                             </div>
                         </div>
                         <div class="row"  style="margin-left: 15px;margin-right: 15px;margin-top: 20px">
-                            <div class="col">
+                            <div class="col" style="margin-top: 10px">
                                 <select class="form-control" id="exampleFormControlSelect1" aria-placeholder="Pilihan Paket"  name="paket">
                                     {{-- <option value="{{$categories->name}}">{{$categories->name}}</option> --}}
                                     <option {{($categories->name) == 'Paket Startup Bronze' ? 'selected' : ''}} value="Paket Startup Bronze">Paket Startup Bronze</option>
@@ -140,7 +140,7 @@
                                     <option {{($categories->name) == 'Paket Website Toko Online' ? 'selected' : ''}} value="Paket Website Toko Online">Paket Website Toko Online</option>
                                 </select>
                             </div>
-                            <div class="col">
+                            <div class="col" style="margin-top: 10px">
                                 <input type="text" class="form-control" placeholder="Masukan No Telp Anda" name="no_telp" required>
                             </div>
                         </div>

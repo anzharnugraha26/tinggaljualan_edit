@@ -119,7 +119,7 @@
           </li>
           <li class="nav-item">
             <a href="{{url("admin/orders")}}" class="nav-link  {{ 'admin/orders' == request()->path()? 'active' : ''}}">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fas fa-sort-amount-up-alt"></i>
               <p>
                 Orders
               </p>
@@ -127,7 +127,7 @@
           </li>
           <li class="nav-item">
             <a href="{{url("admin/contact-us")}}" class="nav-link  {{ 'admin/contact-us' == request()->path()? 'active' : ''}}">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon far fa-envelope"></i>
               <p>
                 Messages Users
               </p>
@@ -135,7 +135,7 @@
           </li>
           <li class="nav-item">
             <a href="{{url("admin/categories")}}" class="nav-link  {{ 'admin/categories' == request()->path()? 'active' : ''}}">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fas fa-archive"></i> 
               <p>
                 Edit Categories
               </p>
@@ -143,7 +143,7 @@
           </li>
           <li class="nav-item">
             <a href="{{url("admin/blog")}}" class="nav-link  {{ 'admin/blog' == request()->path()? 'active' : ''}}">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fab fa-blogger"></i>
               <p>
                 Blog
               </p>
@@ -151,7 +151,7 @@
           </li>
           <li class="nav-item">
             <a href="{{url("/logout")}}" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                Log-Out
               </p>
