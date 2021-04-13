@@ -17,6 +17,8 @@ Route::get('/contact-us', 'FrontEndController@contactUs');
 Route::get('/detail-blog', 'FrontEndController@detailBlog');
 Route::get('download-pdf', 'FrontEndController@downloadPDF');
 Route::post('/saveorder', 'FrontEndController@saveOrder');
+Route::post('/saveSubs', 'FrontEndController@saveSubs');
+Route::post('/subIndex', 'FrontEndController@saveSubsIndex');
 Route::post('/sendcontact', 'FrontEndController@sendContact');
 
 

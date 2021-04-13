@@ -142,7 +142,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{url("admin/blog")}}" class="nav-link  {{ 'admin/blog' == request()->path()? 'active' : ''}}">
+            <a href="{{url("admin/blog")}}" class="nav-link  {{ 'admin/blog' == request()->path()? 'active' : ''}} {{'admin/blog/create-content-blog' == request()->path()? 'active' : ''}}">
               <i class="nav-icon fab fa-blogger"></i>
               <p>
                 Blog

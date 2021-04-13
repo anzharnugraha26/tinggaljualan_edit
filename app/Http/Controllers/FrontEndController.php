@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Contact;
 use App\Order;
+use App\Subscribe;
 use Illuminate\Http\Request;
 use PDF;
 use Illuminate\Support\Facades\Auth;
@@ -80,9 +81,16 @@ class FrontEndController extends Controller
         return redirect('/')->with("message", "aaaa");
     }
 
-    public function edit($id)
+    public function saveSubs(Request $request)
     {
-        //
+        Subscribe::create($request->all());
+        return redirect('/services')->with("services", "aaaaa");
+    }
+
+    public function saveSubsIndex(Request $request)
+    {
+        Subscribe::create($request->all());
+        return redirect('/')->with("services", "aaaaa");
     }
 
     public function update(Request $request, $id)
