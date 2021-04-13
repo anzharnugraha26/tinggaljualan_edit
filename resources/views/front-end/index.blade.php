@@ -338,8 +338,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">fourth air</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="portfolio-details.html">Photography</a></h4>
+								<p>tinggaljualan.com, portfolio</p>
 							</div>
 						</div>
 					</div>
@@ -355,8 +355,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">together sign</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="portfolio-details.html">Photography</a></h4>
+								<p>tinggaljualan.com, portfolio</p>
 							</div>
 						</div>
 					</div>
@@ -372,8 +372,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">multiply fowl</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="portfolio-details.html">Photography</a></h4>
+								<p>tinggaljualan.com, portfolio</p>
 							</div>
 						</div>
 					</div>
@@ -389,8 +389,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">green heaven</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="portfolio-details.html">Photography</a></h4>
+								<p>tinggaljualan.com, portfolio</p>
 							</div>
 						</div>
 					</div>
@@ -406,8 +406,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4>fly male</h4>
-								<p>Animated, portfolio</p>
+								<h4>Photography</h4>
+								<p>tinggaljualan.com, portfolio</p>
 							</div>
 						</div>
 					</div>
@@ -423,8 +423,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">season face</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="portfolio-details.html">Photography</a></h4>
+								<p>tinggaljualan.com, portfolio</p>
 							</div>
 						</div>
 					</div>
