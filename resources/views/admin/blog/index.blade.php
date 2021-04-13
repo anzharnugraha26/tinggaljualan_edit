@@ -48,11 +48,11 @@
                         <div class="row">
                           <div class="col">
                             <label for="nama_belakang">Input Judul</label>
-                            <input type="text" class="form-control" placeholder="Input Judul" name="judul">
+                            <input type="text" class="form-control" placeholder="Input Judul" name="judul" required>
                           </div>
                           <div class="col">
                             <label for="nama_belakang">Pilih Category</label>
-                            <select class="form-control" placeholder="Last name" name="category_id">
+                            <select class="form-control" placeholder="Last name" name="category_id" required>
                               @foreach ($categories as $item)
                               <option value="{{$item->id}}">{{$item->name}}</option>
                               @endforeach
@@ -64,7 +64,7 @@
                         <div class="row">
                           <div class="col">
                             <label for="nama_belakang">Input Thumbernail</label>
-                            <input type="file" class="form-control" placeholder="Input Judul" name="image">
+                            <input type="file" class="form-control" placeholder="Input Judul" name="image" required>
                           </div>
                           <div class="col">
                             <label for="nama_belakang">Pilih Tag</label>
@@ -75,9 +75,9 @@
                       <div class="form-group">
                         <label for="nama_belakang">Content</label>
                         <textarea class="textarea" placeholder="Place some text here"
-                      style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name="content"></textarea>  
+                      style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name="content" required></textarea>  
                       </div>   
-                      <button type="submit">Save</button>           
+                      <button type="submit" class="btn btn btn-primary btn-lg" style="margin-top: 20px"> <i class="fas fa-save"></i> Save</button>           
                 </form>
               </div>
           </div>

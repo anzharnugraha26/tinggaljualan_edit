@@ -10,7 +10,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Orders</h1>
+            <h1>Data Categories</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -41,7 +41,9 @@
                 <tr>
                   <td>{{$loop->iteration}}</td>
                   <td>{{$item->name}}</td>                         
-                  <td><a class="btn btn-info btn-sm" href="{{url('/admin/categories/'.$item->id)}}"> <i class="fas fa-pencil-alt edit"></i>Edit</button></a></td>
+                  <td><a class="btn btn-info btn-sm" href="{{url('/admin/categories/'.$item->id)}}" style="margin-top: 10px"> <i class="fas fa-pencil-alt edit"></i> Edit</button></a>
+                    <a class="btn btn-info btn-sm" href="{{url('service-detail/'.$item->id)}}" style="background:blue;margin-top: 10px" target="_blank"><i class="fas fa-eye"></i> View</a>
+                  </td>
                 </tr>
                 @endforeach
                 </tbody>
