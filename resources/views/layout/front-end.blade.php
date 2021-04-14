@@ -106,7 +106,7 @@
 				<p class="col-lg-8 col-sm-12 footer-text">		
 					<label style="color: black">Copyright 2021 All rights reserved | TinggalJualan.com | PT Pesona Mahameru</label> </p>
 			</div>
-			<a href="https://wa.me/087714961087?text=Hallo tinggal jualan.com" class="float" target="_blank">						
+			<a href="https://wa.me/6287714961087?text=Hallo tinggal jualan.com" class="float" target="_blank">						
 				<i class="fa fa-whatsapp my-float"></a>
 		</div>
 		
