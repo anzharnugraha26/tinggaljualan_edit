@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PDF;
 
 class HomeController extends Controller
 {
@@ -26,6 +27,13 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function downloadPDF()
+    {
+        $pdf = PDF::loadView('front-end.print');
+        return $pdf->download('pricelist.pdf');
+    }
+
     public function logout()
     {
         Auth::logout();

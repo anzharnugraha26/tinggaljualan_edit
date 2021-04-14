@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog\Post;
 use App\Category;
 use App\Contact;
 use App\Order;
@@ -37,7 +38,12 @@ class FrontEndController extends Controller
 
     public function blog()
     {
-        return view('front-end.blog');
+        if (request()->has('category')) {
+            $posts = Post::where('category_id', request('category'))->orderBy('created_at', 'desc')->paginate(6);
+        } else {
+            $posts = Post::orderBy('created_at', 'desc')->paginate(6);
+        }
+        return view('front-end.blog')->with('posts', $posts);
     }
 
     public function contactUs()
@@ -45,9 +51,14 @@ class FrontEndController extends Controller
         return view('front-end.contact-us');
     }
 
-    public function detailBlog()
+    public function detailBlog($slug)
     {
-        return view('front-end.detail-blog');
+        $post = Post::where('slug', $slug)->first();
+        $next_id = Post::where('id', '>', $post->id)->min('id');
+        $prev_id = Post::where('id', '<', $post->id)->max('id');
+        return view('front-end.detail-blog')->with('post', $post)
+        ->with('next', Post::find($next_id))
+        ->with('prev', Post::find($prev_id));
     }
 
     public function portfolio()
@@ -63,11 +74,11 @@ class FrontEndController extends Controller
     }
 
 
-    public function downloadPDF()
-    {
-        $pdf = PDF::loadView('front-end.print');
-        return $pdf->download('pricelist.pdf');
-    }
+    // public function downloadPDF()
+    // {
+    //     $pdf = PDF::loadView('front-end.print');
+    //     return $pdf->download('pricelist.pdf');
+    // }
 
 
     public function saveOrder(Request $request)
@@ -81,7 +92,6 @@ class FrontEndController extends Controller
 
     public function sendContact(Request $request)
     {
-
         Contact::create($request->all());
         return redirect('/')->with("message", "aaaa");
     }

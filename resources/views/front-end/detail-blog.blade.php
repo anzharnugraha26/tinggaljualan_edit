@@ -12,20 +12,17 @@
                 <div class="single-post row">
                     <div class="col-lg-12">
                         <div class="feature-img">
-                            <img class="img-fluid" src="{{asset('front-master/img/blog/feature-img1.jpg')}}" alt="">
+                            <img class="img-fluid" src="{{asset('/img/blog/'. $post->image)}}" alt="">
                         </div>									
                     </div>
                     <div class="col-lg-3  col-md-3">
                         <div class="blog_info text-right">
                             <div class="post_tag">
-                                <a href="#">Food,</a>
-                                <a class="active" href="#">Technology,</a>
-                                <a href="#">Politics,</a>
-                                <a href="#">Lifestyle</a>
+                               
                             </div>
                             <ul class="blog_meta list">
-                                <li><a href="#">Mark wiens<i class="lnr lnr-user"></i></a></li>
-                                <li><a href="#">12 Dec, 2017<i class="lnr lnr-calendar-full"></i></a></li>
+                                <li><a href="#">Admin<i class="lnr lnr-user"></i></a></li>
+                                <li><a href="#">{{ $post->created_at->toFormattedDateString() }}<i class="lnr lnr-calendar-full"></i></a></li>
                                 <li><a href="#">1.2M Views<i class="lnr lnr-eye"></i></a></li>
                                 <li><a href="#">06 Comments<i class="lnr lnr-bubble"></i></a></li>
                             </ul>
@@ -38,21 +35,11 @@
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-9 blog_details">
-                        <h2>Astronomy Binoculars A Great Alternative</h2>
-                        <p class="excert">
-                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-                        </p>
-                        <p>
-                            Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed
-                        </p>
-                        <p>
-                            Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed
-                        </p>
+                        <h2>{{$post->title}}</h2>
+                        {!! $post->content !!}
                     </div>
                     <div class="col-lg-12">
-                        <div class="quotes">
-                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.										
-                        </div>
+                       
                         <div class="row">
                             <div class="col-6">
                                 <img class="img-fluid" src="img/blog/post-img1.jpg" alt="">
@@ -60,14 +47,7 @@
                             <div class="col-6">
                                 <img class="img-fluid" src="img/blog/post-img2.jpg" alt="">
                             </div>	
-                            <div class="col-lg-12 mt-25">
-                                <p>
-                                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower.
-                                </p>
-                                <p>
-                                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower.
-                                </p>											
-                            </div>									
+                           									
                         </div>
                     </div>
                 </div>
@@ -81,14 +61,16 @@
                                 <a href="#"><span class="lnr text-white lnr-arrow-left"></span></a>
                             </div>
                             <div class="detials">
-                                <p>Prev Post</p>
-                                <a href="#"><h4>Space The Final Frontier</h4></a>
+                                @if($next)
+                                <a href="{{url('detail-blog' , ['slug' => $next->slug ])}}"><h4>Space The Final Frontier</h4></a>
+                                @endif
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
                             <div class="detials">
-                                <p>Next Post</p>
-                                <a href="#"><h4>Telescopes 101</h4></a>
+                                @if($prev)
+                                <a href="{{url('detail-blog' , ['slug' => $prev->slug ])}}"><h4>Prev</h4></a>
+                                @endif
                             </div>
                             <div class="arrow">
                                 <a href="#"><span class="lnr text-white lnr-arrow-right"></span></a>
@@ -347,18 +329,10 @@
                     <aside class="single-sidebar-widget tag_cloud_widget">
                         <h4 class="widget_title">Tag Clouds</h4>
                         <ul class="list">
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Fashion</a></li>
-                            <li><a href="#">Architecture</a></li>
-                            <li><a href="#">Fashion</a></li>
-                            <li><a href="#">Food</a></li>
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Lifestyle</a></li>
-                            <li><a href="#">Art</a></li>
-                            <li><a href="#">Adventure</a></li>
-                            <li><a href="#">Food</a></li>
-                            <li><a href="#">Lifestyle</a></li>
-                            <li><a href="#">Adventure</a></li>
+                            @foreach($post->tags as $tag)
+                            <li><a href="#">{{ $tag->tag }}</a></li>
+                            @endforeach
+                           
                         </ul>
                     </aside>
                 </div>
