@@ -35,18 +35,18 @@ class BlogController extends Controller
     public function savePost(Request $request)
     {
         $fileName = '';
-        if ($request->featured->getClientOriginalName()) {
-            $file = str_replace(' ', '', $request->featured->getClientOriginalName());
+        if ($request->image->getClientOriginalName()) {
+            $file = str_replace(' ', '', $request->image->getClientOriginalName());
             $fileName = date('mYdHs') . rand(1, 999) . '_' . $file;
-            $request->featured->move('img/blog', $fileName);
+            $request->image->move('img/blog', $fileName);
         }
-        $slug = Str::slug($request->judul);
+        $slug = Str::slug($request->title);
         $post = Post::create(array_merge($request->all(), [
             'slug' => $slug,
-            'featured' => $fileName, 
+            'image' => $fileName, 
         ]));
         $post->tags()->attach($request->tags);
-        return redirect('/blog');
+        return redirect('/admin/blog');
     }
 
     

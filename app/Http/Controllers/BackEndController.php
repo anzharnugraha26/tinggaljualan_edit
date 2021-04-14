@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
+use App\Blog\Post;
 use App\Category;
 use App\Contact;
 use App\Order;
@@ -30,8 +31,8 @@ class BackEndController extends Controller
     }
 
     public function blog(){
-        $blog = Blog::all();
-        return view('admin.blog.daftar', compact('blog'));
+        $posts = Post::all();
+        return view('admin.blog.daftar', compact('posts'));
     }
 
     public function categories(){

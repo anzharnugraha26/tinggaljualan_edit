@@ -64,7 +64,7 @@
                         <div class="row">
                           <div class="col">
                             <label for="nama_belakang">Input Thumbernail</label>
-                            <input type="file" class="form-control" placeholder="Input Judul" name="featured" required>
+                            <input type="file" class="form-control" placeholder="Input Judul" name="image" required>
                           </div>
                           <div class="col">
                             <label for="nama_belakang">Input Thumbernail</label>

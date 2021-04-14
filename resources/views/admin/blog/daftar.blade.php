@@ -52,14 +52,19 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach ($blog as $item)
+                    @foreach ($posts as $item)
                 <tr>
                   <td>{{$loop->iteration}}</td>
-                  <td>{{$item->judul}}</td>
-                  <td>{{$item->judul}}</td>
-                  {{-- <td>{{$item->category->name}}</td> --}}
-                  <td> <img src="{{ asset('/img/blog/' . $item->image) }}"
-                    alt="" style="width:100px;height: 100px;"> </td>
+                  <td>{{$item->title}}</td>
+                  
+                   <td>{{$item->category->name}}</td> 
+                  <td> 
+                    @if (!empty($item->featured))
+                    <img src="{{ asset('img/blog/' . $item->image) }}"
+                        alt="" style="width:100px">
+                     @endif 
+                  </td>
+                  
                     <td>{{$item->slug}}</td>
                                   
                   <td><a class="btn btn-info btn-sm" href="{{$item->id}}" style="margin-top: 10px"> <i class="fas fa-pencil-alt edit"></i> Edit</a>  <a class="btn btn-info btn-sm" href="{{$item->id}}" style="background:blue;margin-top: 10px"><i class="fas fa-eye"></i> View</a>
