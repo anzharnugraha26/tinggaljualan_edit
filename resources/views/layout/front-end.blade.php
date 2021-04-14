@@ -99,8 +99,8 @@
     @yield('content')
 
 
-    <footer class="footer_area">
-		<div class="container">
+    <footer class="footer_area" style="">
+		<div class="container" style="">
 			<div class="row justify-content-center">
 				<div class="col-lg-12">
 					<div class="footer_top flex-column">
@@ -110,7 +110,7 @@
 							</a>
 							<h4>Follow Me</h4>
 						</div>
-						<div class="footer_social">
+						<div class="footer_social" >
 							<a href="#"><i class="fa fa-facebook"></i></a>
 							<a href="https://www.instagram.com/tinggaljualandotcom"  target="_blank"><i class="fa fa-instagram"></i></a>
 							<a href="https://wa.me/6287714961087?text=Hallo tinggal jualan.com" target="_blank"><i class="fa fa-whatsapp"></i></a>
@@ -119,13 +119,17 @@
 				</div>
 			</div>
 			<div class="row footer_bottom justify-content-center">
-				<p class="col-lg-8 col-sm-12 footer-text">
-						<a href="https://wa.me/087714961087?text=Hallo tinggal jualan.com" class="float" target="_blank">						
-							<i class="fa fa-whatsapp my-float"></a>
+				<p class="col-lg-8 col-sm-12 footer-text">		
 					<label style="color: black">Copyright 2021 All rights reserved | TinggalJualan.com | PT Pesona Mahameru</label> </p>
 			</div>
+			<a href="https://wa.me/087714961087?text=Hallo tinggal jualan.com" class="float" target="_blank">						
+				<i class="fa fa-whatsapp my-float"></a>
 		</div>
+		
 	</footer>
+
+	
+	
 	<script src="{{asset('front-master/js/jquery-3.2.1.min.js')}}"></script>
 	<script src="{{asset('front-master/js/popper.js')}}"></script>
 	<script src="{{asset('front-master/js/bootstrap.min.js')}}"></script>
@@ -144,7 +148,7 @@
 	<script src="{{asset('front-master/js/theme.js')}}"></script>
 
 	<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 	@yield('script')
 	

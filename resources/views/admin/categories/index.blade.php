@@ -33,6 +33,7 @@
                 <tr>
                   <th>No</th>
                   <th>Name Categories</th>
+                  <th>Icon</th>
                   <th>action</th>
                 </tr>
                 </thead>
@@ -41,6 +42,7 @@
                 <tr>
                   <td>{{$loop->iteration}}</td>
                   <td>{{$item->name}}</td>                         
+                  <td><img src="{{asset('img/services/'.$item->image)}}" style="height: 100px;width: 100px"></td>                         
                   <td><a class="btn btn-info btn-sm" href="{{url('/admin/categories/'.$item->id)}}" style="margin-top: 10px"> <i class="fas fa-pencil-alt edit"></i> Edit</button></a>
                     <a class="btn btn-info btn-sm" href="{{url('service-detail/'.$item->id)}}" style="background:blue;margin-top: 10px" target="_blank"><i class="fas fa-eye"></i> View</a>
                   </td>

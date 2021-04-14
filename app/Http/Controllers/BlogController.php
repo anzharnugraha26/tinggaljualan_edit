@@ -3,17 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
+use App\BlogTag;
 use App\CategoryBlog;
+use App\TagBlog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function saveCat(Request $request)
     {
         $slug = Str::slug($request->name);
@@ -26,19 +24,15 @@ class BlogController extends Controller
 
     public function create()
     {
+        $tags = TagBlog::all();
         $categories = CategoryBlog::all();
-        return view('admin.blog.index', compact('categories'));
+        return view('admin.blog.index', compact('categories','tags'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
-
+       
         $fileName = '';
         if ($request->image->getClientOriginalName()) {
             $file = str_replace(' ', '', $request->image->getClientOriginalName());
@@ -47,53 +41,38 @@ class BlogController extends Controller
         }
 
         $slug = Str::slug($request->judul);
-        Blog::create(array_merge($request->all(), [
+        $blogs =  Blog::create(array_merge($request->all(), [
             'slug' => $slug,
-            'image' => $fileName
+            'image' => $fileName,
+            
         ]));
+        // BlogTag::create([
+        //     'blog_id' => $blogs->id,
+        //     'tag_blog_id' => array_merge($request->tags)
+        // ]);
+        
         return redirect("admin/blog");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+  
     public function destroy($id)
     {
         //

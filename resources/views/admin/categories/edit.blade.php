@@ -62,7 +62,7 @@
                       <textarea class="textarea" placeholder="Place some text here"
                     style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name="description" required>{!!$cat->description!!}</textarea>  
                     </div>   
-                    <button type="submit" class="btn btn btn-primary btn-lg" style="margin-top: 20px"> <i class="fas fa-save"></i>Update</button>           
+                    <button type="submit" class="btn btn btn-primary btn-lg" style="margin-top: 20px"> <i class="fas fa-save"></i> Update</button>           
               </form>
             </div>
           </div>
