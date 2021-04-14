@@ -48,7 +48,7 @@
                         <div class="row">
                           <div class="col">
                             <label for="nama_belakang">Input Judul</label>
-                            <input type="text" class="form-control" placeholder="Input Judul" name="judul" required>
+                            <input type="text" class="form-control" placeholder="Input Judul" name="title" required>
                           </div>
                           <div class="col">
                             <label for="nama_belakang">Pilih Category</label>
@@ -64,7 +64,7 @@
                         <div class="row">
                           <div class="col">
                             <label for="nama_belakang">Input Thumbernail</label>
-                            <input type="file" class="form-control" placeholder="Input Judul" name="image" required>
+                            <input type="file" class="form-control" placeholder="Input Judul" name="featured" required>
                           </div>
                           <div class="col">
                             <label for="nama_belakang">Input Thumbernail</label>
@@ -72,7 +72,7 @@
                               @foreach ($tags as $tag)
                               <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="tag{{$tag->id}}" name="tags[]" value="{{$tag->id}}" >
-                                <label class="form-check-label" for="tag{{$tag->id}}">{{$tag->name}}</label>
+                                <label class="form-check-label" for="tag{{$tag->id}}">{{$tag->tag}}</label>
                               </div>
                               @endforeach
                             </div>

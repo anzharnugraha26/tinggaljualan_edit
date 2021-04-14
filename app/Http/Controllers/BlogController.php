@@ -3,36 +3,55 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
-use App\BlogTag;
+
 use App\CategoryBlog;
-use App\TagBlog;
+use App\Blog\CategoryPost;
+use App\Blog\Post;
+use App\Blog\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
-    
     public function saveCat(Request $request)
     {
-        $slug = Str::slug($request->name);
-        CategoryBlog::create(array_merge($request->all(),[
-            'slug' => $slug
-        ]));
+        CategoryPost::create($request->all());
         return redirect()->back();
     }
 
+    public function saveTag(Request $request)
+    {
+        Tag::create($request->all());
+        return redirect()->back();
+    }
 
     public function create()
     {
-        $tags = TagBlog::all();
-        $categories = CategoryBlog::all();
-        return view('admin.blog.index', compact('categories','tags'));
+        $categories = CategoryPost::all();
+        $tags = Tag::all();
+        return view('admin.blog.index', compact('categories', 'tags'));
+    }
+
+    public function savePost(Request $request)
+    {
+        $fileName = '';
+        if ($request->featured->getClientOriginalName()) {
+            $file = str_replace(' ', '', $request->featured->getClientOriginalName());
+            $fileName = date('mYdHs') . rand(1, 999) . '_' . $file;
+            $request->featured->move('img/blog', $fileName);
+        }
+        $slug = Str::slug($request->judul);
+        $post = Post::create(array_merge($request->all(), [
+            'slug' => $slug,
+            'featured' => $fileName, 
+        ]));
+        $post->tags()->attach($request->tags);
+        return redirect('/blog');
     }
 
     
     public function store(Request $request)
     {
-       
         $fileName = '';
         if ($request->image->getClientOriginalName()) {
             $file = str_replace(' ', '', $request->image->getClientOriginalName());
