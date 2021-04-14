@@ -50,6 +50,11 @@ class FrontEndController extends Controller
         return view('front-end.detail-blog');
     }
 
+    public function portfolio()
+    {
+        return view('front-end.porto');
+    }
+
 
     public function serviceDetail($id)
     {

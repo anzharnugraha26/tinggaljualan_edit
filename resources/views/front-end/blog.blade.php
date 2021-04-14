@@ -2,7 +2,6 @@
 @section('title')
     Blog
 @endsection
-
 @section('content')
 
 <section class="banner_area">
@@ -384,7 +383,18 @@
         </div>
     </div>
 </section>
-<!--=========
 
+@endsection
 
+@section('script')
+@if(Session::has('services'))
+<script>
+	Swal.fire(
+  	'Good job!',
+  	'Anda Akan Mendapat Pembaruan Melalui Email',
+  	'success'
+)
+</script>
+@endif
+    
 @endsection

@@ -63,30 +63,14 @@
 							<li class="nav-item {{ '/' == request()->path()? 'active' : ''}}"><a class="nav-link" href="{{url("/")}}">Home</a></li>
 							{{-- <li class="nav-item {{ 'about' == request()->path()? 'active' : ''}}"><a class="nav-link" href="{{url('/about')}}" data-turbolinks="true">About</a></li> --}}
 							<li class="nav-item {{ 'services' == request()->path()? 'active' : ''}} {{ 'service-detail' == request()->path()? 'active' : ''}}"><a class="nav-link" href="{{url('/services')}}" data-turbolinks="true">Services</a></li>
-							<li class="nav-item"><a class="nav-link" href="{{url("#")}}">Portfolio</a></li>
-							{{-- <li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-									<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portfolio Details</a></li>
-								</ul>
-							</li> --}}
-							{{-- <li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Blog</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item "><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-								</ul>
-							</li> --}}
+							<li class="nav-item"><a class="nav-link {{ 'portfolio' == request()->path()? 'active' : ''}}" href="{{url("/portfolio")}}">Portfolio</a></li>
 							<li class="nav-item {{ 'blog'  == request()->path()? 'active' : ''}}
 								 {{ 'detail-blog'  == request()->path()? 'active' : ''}}"><a class="nav-link" href="{{url("/blog")}}">Blog</a></li>
 							<li class="nav-item {{ 'contact-us' == request()->path()? 'active' : ''}}"><a class="nav-link" href="{{url("/contact-us")}}">Contact</a></li>
 							@if (Auth::check()) 
-								<li class="nav-item"><a class="nav-link" href="{{url("/logout")}}"><img src="{{asset("front-master/img/logout.png")}}" style="background-color: white;"> |  Log-Out</a></li>
+								<li class="nav-item"><a class="nav-link" href="{{url("/logout")}}"> | <i class="fa fa-sign-out"></i>Log-Out</a></li>
 							@else
-							<li class="nav-item"><a class="nav-link" href="{{url("/login")}}"><img src="{{asset("front-master/img/login.png")}}" style="background-color: white;"> |  Log-in</a></li>
+							<li class="nav-item"><a class="nav-link" href="{{url("/login")}}"> | <i class="fa fa-sign-in"></i>  Log-in</a></li>
 							
 							@endif
 						</ul>

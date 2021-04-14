@@ -15,6 +15,7 @@ Route::get('/service-detail/{id}', 'FrontEndController@serviceDetail');
 Route::get('/blog', 'FrontEndController@blog');
 Route::get('/contact-us', 'FrontEndController@contactUs');
 Route::get('/detail-blog', 'FrontEndController@detailBlog');
+Route::get('/portfolio', 'FrontEndController@portfolio');
 Route::get('download-pdf', 'FrontEndController@downloadPDF');
 Route::post('/saveorder', 'FrontEndController@saveOrder');
 Route::post('/saveSubs', 'FrontEndController@saveSubs');
