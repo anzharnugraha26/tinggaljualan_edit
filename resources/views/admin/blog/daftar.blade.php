@@ -61,7 +61,7 @@
                   <td> 
                     @if (!empty($item->featured))
                     <img src="{{ asset('img/blog/' . $item->image) }}"
-                        alt="" style="width:100px">
+                        alt="" style="width:100px;height: 100px">
                      @endif 
                   </td>
                   

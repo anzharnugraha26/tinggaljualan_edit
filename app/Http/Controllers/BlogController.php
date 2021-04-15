@@ -8,6 +8,7 @@ use App\CategoryBlog;
 use App\Blog\CategoryPost;
 use App\Blog\Post;
 use App\Blog\Tag;
+use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -34,6 +35,9 @@ class BlogController extends Controller
 
     public function savePost(Request $request)
     {
+        $jmlCategory = CategoryPost::where('id', $request->category_id)->first();
+        $currentTotal = $jmlCategory->jumlah + 1 ;
+
         $fileName = '';
         if ($request->image->getClientOriginalName()) {
             $file = str_replace(' ', '', $request->image->getClientOriginalName());
@@ -44,7 +48,8 @@ class BlogController extends Controller
         $post = Post::create(array_merge($request->all(), [
             'slug' => $slug,
             'image' => $fileName, 
-        ]));
+        ])); 
+        CategoryPost::where('id', $request->category_id)->update(array('jumlah' => $currentTotal));
         $post->tags()->attach($request->tags);
         return redirect('/admin/blog');
     }

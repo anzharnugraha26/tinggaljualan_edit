@@ -83,7 +83,7 @@
                                 <ul class="blog_meta list">
                                     <li><a href="#">Admin<i class="lnr lnr-user"></i></a></li>
                                     <li><a href="#">{{ $item->created_at->toFormattedDateString() }}<i class="lnr lnr-calendar-full"></i></a></li>
-                                    <li><a href="#">1.2M Views<i class="lnr lnr-eye"></i></a></li>
+                                    {{-- <li><a href="#">1.2M Views<i class="lnr lnr-eye"></i></a></li> --}}
                                     <li><a href="#">{{$item->coment}} Comments<i class="lnr lnr-bubble"></i></a></li>
                                 </ul>
                             </div>
@@ -194,7 +194,7 @@
                             <li>
                                 <a href="#" class="d-flex justify-content-between">
                                     <p>{{$item->name}}</p>
-                                    <p>37</p>
+                                    <p>{{$item->jumlah}}</p>
                                 </a>
                             </li>
                             @endforeach														
