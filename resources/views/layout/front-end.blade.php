@@ -109,8 +109,7 @@
 			<a href="https://wa.me/6287714961087?text=Hallo tinggal jualan.com" class="float" target="_blank">						
 				<i class="fa fa-whatsapp my-float"></a>
 		</div>
-		
-	</footer>
+		</footer>
 
 	
 	
@@ -133,6 +132,8 @@
 
 	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+	
 
 	@yield('script')
 	

@@ -55,29 +55,33 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                             <div class="thumb">
-                                <a href="#"><img class="img-fluid" src="img/blog/prev.jpg" alt=""></a>
+                                @if($prev)
+                                <a href="{{url('blog' , ['slug' => $prev->slug ])}}" class="primary_btn"> <span>Prev Artikel</span></a>
+                                @endif
                             </div>
                             <div class="arrow">
                                 <a href="#"><span class="lnr text-white lnr-arrow-left"></span></a>
                             </div>
                             <div class="detials">
-                                @if($prev)
-                                <a href="{{url('detail-blog' , ['slug' => $prev->slug ])}}"><h4>Prev Artikel</h4></a>
-                                @endif
+                                {{-- @if($prev)
+                                <a href="{{url('blog' , ['slug' => $prev->slug ])}}"><h4>Prev Artikel</h4></a>
+                                @endif --}}
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
                             <div class="detials">
-                                @if($next)
-                                <a href="{{url('detail-blog' , ['slug' => $next->slug ])}}"><h4>Next Artikel</h4></a>
-                                @endif
+                                {{-- @if($next)
+                                <a href="{{url('blog' , ['slug' => $next->slug ])}}"><h4>Next Artikel</h4></a>
+                                @endif --}}
                             </div>
                            
                             <div class="arrow">
                                 <a href="#"><span class="lnr text-white lnr-arrow-right"></span></a>
                             </div>
                             <div class="thumb">
-                                <a href="#"><img class="img-fluid" src="img/blog/next.jpg" alt=""></a>
+                                @if($next)
+                                <a href="{{url('blog' , ['slug' => $next->slug ])}}" class="primary_btn"><span>Next Artikel</span></a>
+                                @endif
                             </div>										
                         </div>									
                     </div>
@@ -86,7 +90,7 @@
                     <h4>Comments</h4>
                     <div class="comment-list">
                         <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
+                            {{-- <div class="user justify-content-between d-flex">
                                 <div class="thumb">
                                     <img src="img/blog/c1.jpg" alt="">
                                 </div>
@@ -99,13 +103,13 @@
                                     </p>
                                     @endforeach
                                 </div>
-                            </div>
+                            </div> --}}
                             {{-- <div class="reply-btn">
                                     <a href="" class="btn-reply text-uppercase">reply</a> 
                             </div> --}}
                         </div>
                     </div>	
-                    {{-- <div class="comment-list left-padding">
+                    {{-- {{-- <div class="comment-list left-padding">
                         <div class="single-comment justify-content-between d-flex">
                             <div class="user justify-content-between d-flex">
                                 <div class="thumb">
@@ -123,8 +127,8 @@
                                     <a href="" class="btn-reply text-uppercase">reply</a> 
                             </div>
                         </div>
-                    </div>	
-                    <div class="comment-list left-padding">
+                    </div>	 --}}
+                    {{-- <div class="comment-list left-padding">
                         <div class="single-comment justify-content-between d-flex">
                             <div class="user justify-content-between d-flex">
                                 <div class="thumb">
@@ -142,18 +146,20 @@
                                     <a href="" class="btn-reply text-uppercase">reply</a> 
                             </div>
                         </div>
-                    </div>	
+                    </div>	 --}}
+                    @foreach ($coment as $item)
                     <div class="comment-list">
                         <div class="single-comment justify-content-between d-flex">
+                            
                             <div class="user justify-content-between d-flex">
                                 <div class="thumb">
                                     <img src="img/blog/c4.jpg" alt="">
                                 </div>
                                 <div class="desc">
-                                    <h5><a href="#">Maria Luna</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
+                                    <h5><a href="#">{{$item->email}}</a></h5>
+                                    <p class="date">{{ $item->created_at->toFormattedDateString() }}</p>
                                     <p class="comment">
-                                        Never say goodbye till the end comes!
+                                       {{$item->message}}
                                     </p>
                                 </div>
                             </div>
@@ -161,8 +167,9 @@
                                     <a href="" class="btn-reply text-uppercase">reply</a> 
                             </div>
                         </div>
-                    </div>	
-                    <div class="comment-list">
+                    </div>
+                    @endforeach	
+                    {{-- <div class="comment-list">
                         <div class="single-comment justify-content-between d-flex">
                             <div class="user justify-content-between d-flex">
                                 <div class="thumb">

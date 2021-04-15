@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog\CategoryPost;
 use App\Blog\ComentBlog;
 use App\Blog\Post;
+use App\Blog\Tag;
 use App\Category;
 use App\Contact;
 use App\Order;
@@ -39,12 +41,14 @@ class FrontEndController extends Controller
 
     public function blog()
     {
+        $categories = CategoryPost::all();
+        $tags = Tag::all();
         if (request()->has('category')) {
             $posts = Post::where('category_id', request('category'))->orderBy('created_at', 'desc')->paginate(6);
         } else {
-            $posts = Post::orderBy('created_at', 'desc')->paginate(6);
+            $posts = Post::orderBy('created_at', 'desc')->paginate(2);
         }
-        return view('front-end.blog')->with('posts', $posts);
+        return view('front-end.blog')->with('posts', $posts)->with('tags', $tags)->with('categories', $categories);
     }
 
     public function contactUs()

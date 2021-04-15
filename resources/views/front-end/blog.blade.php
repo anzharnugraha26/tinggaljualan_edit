@@ -94,7 +94,7 @@
                                 <div class="blog_details">
                                     <a href="{{url('/detail-blog')}}"><h2>{{$item->title}}</h2></a>
                                     <p>{!! substr($item->content, 0, 200) !!}</p>
-                                    <a href="{{url('detail-blog/' . $item->slug)}}" class="primary_btn"><span>View More</span></a>
+                                    <a href="{{url('blog/' . $item->slug)}}" class="primary_btn"><span>View More</span></a>
                                 </div>
                             </div>
                         </div>
@@ -103,25 +103,26 @@
                  
                     <nav class="blog-pagination justify-content-center d-flex">
                         <ul class="pagination">
-                            <li class="page-item">
+                            {{-- <li class="page-item">
                                 <a href="#" class="page-link" aria-label="Previous">
                                     <span aria-hidden="true">
                                         <span class="lnr lnr-chevron-left"></span>
                                     </span>
                                 </a>
-                            </li>
-                            <li class="page-item"><a href="#" class="page-link">01</a></li>
+                            </li> --}}
+                            {{ $posts->links() }}
+                            {{-- <li class="page-item"><a href="#" class="page-link">01</a></li>
                             <li class="page-item active"><a href="#" class="page-link">02</a></li>
                             <li class="page-item"><a href="#" class="page-link">03</a></li>
                             <li class="page-item"><a href="#" class="page-link">04</a></li>
-                            <li class="page-item"><a href="#" class="page-link">09</a></li>
-                            <li class="page-item">
+                            <li class="page-item"><a href="#" class="page-link">09</a></li> --}}
+                            {{-- <li class="page-item">
                                 <a href="#" class="page-link" aria-label="Next">
                                     <span aria-hidden="true">
                                         <span class="lnr lnr-chevron-right"></span>
                                     </span>
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </nav>
                 </div>
@@ -150,7 +151,7 @@
                         <p>Boot camps have its supporters andit sdetractors. Some people do not understand why you should have to spend money on boot camp when you can get. Boot camps have itssuppor ters andits detractors.</p>
                         <div class="br"></div>
                     </aside>
-                    <aside class="single_sidebar_widget popular_post_widget">
+                    {{-- <aside class="single_sidebar_widget popular_post_widget">
                         <h3 class="widget_title">Popular Posts</h3>
                         <div class="media post_item">
                             <img src="img/blog/popular-post/post1.jpg" alt="post">
@@ -181,7 +182,7 @@
                             </div>
                         </div>
                         <div class="br"></div>
-                    </aside>
+                    </aside> --}}
                     <aside class="single_sidebar_widget ads_widget">
                         <a href="#"><img class="img-fluid" src="img/blog/add.jpg" alt=""></a>
                         <div class="br"></div>
@@ -189,48 +190,14 @@
                     <aside class="single_sidebar_widget post_category_widget">
                         <h4 class="widget_title">Post Catgories</h4>
                         <ul class="list cat-list">
+                            @foreach ($categories as $item)
                             <li>
                                 <a href="#" class="d-flex justify-content-between">
-                                    <p>Technology</p>
+                                    <p>{{$item->name}}</p>
                                     <p>37</p>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Lifestyle</p>
-                                    <p>24</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Fashion</p>
-                                    <p>59</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Art</p>
-                                    <p>29</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Food</p>
-                                    <p>15</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Architecture</p>
-                                    <p>09</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="d-flex justify-content-between">
-                                    <p>Adventure</p>
-                                    <p>44</p>
-                                </a>
-                            </li>															
+                            @endforeach														
                         </ul>
                         <div class="br"></div>
                     </aside>
@@ -255,18 +222,9 @@
                     <aside class="single-sidebar-widget tag_cloud_widget">
                         <h4 class="widget_title">Tag Clouds</h4>
                         <ul class="list">
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Fashion</a></li>
-                            <li><a href="#">Architecture</a></li>
-                            <li><a href="#">Fashion</a></li>
-                            <li><a href="#">Food</a></li>
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Lifestyle</a></li>
-                            <li><a href="#">Art</a></li>
-                            <li><a href="#">Adventure</a></li>
-                            <li><a href="#">Food</a></li>
-                            <li><a href="#">Lifestyle</a></li>
-                            <li><a href="#">Adventure</a></li>
+                            @foreach ($tags as $item)
+                            <li><a href="#">{{$item->tag}}</a></li>     
+                            @endforeach
                         </ul>
                     </aside>
                 </div>
