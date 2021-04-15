@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog\ComentBlog;
 use App\Blog\Post;
 use App\Category;
 use App\Contact;
@@ -108,9 +109,10 @@ class FrontEndController extends Controller
         return redirect('/')->with("services", "aaaaa");
     }
 
-    public function update(Request $request, $id)
+    public function sendComent(Request $request)
     {
-        //
+        ComentBlog::create($request->all());
+        return redirect()->back();
     }
 
     public function destroy($id)

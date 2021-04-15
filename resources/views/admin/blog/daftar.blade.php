@@ -1,6 +1,6 @@
 @extends('layout.back-end')
 @section('title')
-   Messages Users 
+   Blog
 @endsection
 @section('content')
 
