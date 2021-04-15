@@ -26,13 +26,13 @@
     <div class="container">
         <div class="portfolio_details_inner">
             <div class="row">
-                <div class="col-lg-6" style="padding-top: 80px">
+                <div class="col-lg-6" style="margin-top: -60px">
                     <div class="left_img">
                         <img class="img-fluid" src="{{asset('img/services/'.$categories->icon_detail)}}" alt="">
                     </div>
                 </div>
-                <div class="offset-lg-1 col-lg-5" style="margin-top: 20px">
-                    <div class="portfolio_right_text mt-30">
+                <div class="offset-lg-1 col-lg-5" style="margin-top: -40px" >
+                    <div class="portfolio_right_text mt-30" style="">
                         <h4 class="text-uppercase">{{$categories->name}}</h4>
                         <p>
                             {!!$categories->description!!}
@@ -62,42 +62,6 @@
          
         </div>
     </div>
-    {{-- <div class="container" style="margin-top: 20px">
-        <div class="portfolio_details_inner">
-        <form>
-            @csrf
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Your Name</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukan Nama Lengkap">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">No Telp</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukan No Telp">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Pilihan Paket</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Brifieng</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-          </form>
-        
-       
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </div> --}}
 </section>
 
 <section class="newsletter_area">

@@ -55,9 +55,10 @@ class FrontEndController extends Controller
     public function detailBlog($slug)
     {
         $post = Post::where('slug', $slug)->first();
+        $coment = ComentBlog::where('blog_id', $post->id)->get();
         $next_id = Post::where('id', '>', $post->id)->min('id');
         $prev_id = Post::where('id', '<', $post->id)->max('id');
-        return view('front-end.detail-blog')->with('post', $post)
+        return view('front-end.detail-blog', compact('coment'))->with('post', $post)
         ->with('next', Post::find($next_id))
         ->with('prev', Post::find($prev_id));
     }

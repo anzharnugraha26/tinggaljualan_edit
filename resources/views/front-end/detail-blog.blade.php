@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div class="comments-area">
-                    <h4>05 Comments</h4>
+                    <h4>Comments</h4>
                     <div class="comment-list">
                         <div class="single-comment justify-content-between d-flex">
                             <div class="user justify-content-between d-flex">
@@ -91,19 +91,21 @@
                                     <img src="img/blog/c1.jpg" alt="">
                                 </div>
                                 <div class="desc">
-                                    <h5><a href="#">Emilly Blunt</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
+                                    @foreach ($coment as $item)
+                                    <h5><a href="#">{{$item->email}}</a></h5>
+                                    <p class="date">{{ $item->created_at->toFormattedDateString() }} </p>
                                     <p class="comment">
-                                        Never say goodbye till the end comes!
+                                        {{$item->message}}
                                     </p>
+                                    @endforeach
                                 </div>
                             </div>
-                            <div class="reply-btn">
+                            {{-- <div class="reply-btn">
                                     <a href="" class="btn-reply text-uppercase">reply</a> 
-                            </div>
+                            </div> --}}
                         </div>
                     </div>	
-                    <div class="comment-list left-padding">
+                    {{-- <div class="comment-list left-padding">
                         <div class="single-comment justify-content-between d-flex">
                             <div class="user justify-content-between d-flex">
                                 <div class="thumb">
@@ -178,7 +180,7 @@
                                     <a href="" class="btn-reply text-uppercase">reply</a> 
                             </div>
                         </div>
-                    </div>	                                             				
+                    </div>	                                             				 --}}
                 </div>
                 <div class="comment-form">
                     <h4>Leave a Reply</h4>
