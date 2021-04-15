@@ -186,11 +186,19 @@
                         @csrf
                         <div class="form-group form-inline">
                             <div class="form-group col-lg-6 col-md-6 name">
-                                <input type="text" name="blog_id" value="{{$post->id}}">
-                            <input type="text" class="form-control" name="name" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'">
-                            </div>
+                                <input type="hidden" name="blog_id" value="{{$post->id}}">
+                                @if (Auth::check())
+                                <input type="text" class="form-control" name="name" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'" value="{{Auth::user()->name}}" required>
+                                @else
+                                <input type="text" class="form-control" name="name" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'" required>
+                                @endif
+                        </div>
                             <div class="form-group col-lg-6 col-md-6 email">
-                            <input type="email" class="form-control" name="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" value>
+                                @if (Auth::check())
+                            <input type="email" class="form-control" name="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" value="{{Auth::user()->email}}" required>
+                                @else
+                            <input type="email" class="form-control" name="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" value="">
+                                @endif
                             </div>										
                         </div>
                         <div class="form-group">

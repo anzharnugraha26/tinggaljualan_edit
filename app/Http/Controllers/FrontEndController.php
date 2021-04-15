@@ -74,19 +74,11 @@ class FrontEndController extends Controller
         return view('front-end.services-detail', compact('categories'));
     }
 
-
-    // public function downloadPDF()
-    // {
-    //     $pdf = PDF::loadView('front-end.print');
-    //     return $pdf->download('pricelist.pdf');
-    // }
-
-
     public function saveOrder(Request $request)
     {
         if (Auth::check()) {
             Order::create($request->all());
-            return redirect()->back();
+            return redirect()->back()->with("success", "aaaa");
         }
         return redirect('/login')->with("belum_login", "aaaaa");
     }
@@ -111,8 +103,11 @@ class FrontEndController extends Controller
 
     public function sendComent(Request $request)
     {
-        ComentBlog::create($request->all());
-        return redirect()->back();
+        if (Auth::check()) {
+            ComentBlog::create($request->all());
+            return redirect()->back();
+        }
+        return redirect('/login')->with("belum_login", "aaaaa");
     }
 
     public function destroy($id)

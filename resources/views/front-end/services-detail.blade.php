@@ -113,7 +113,7 @@
                         <form action="{{url("/saveorder")}}" method="POST">
                             @csrf
                         <div class="row"  style="margin-left: 15px;margin-right: 15px">
-                            <div class="col">
+                            <div class="col"> 
                                 @if (Auth::check()) 
                                 <input type="text" class="form-control" placeholder="Masukan Nama Lengkap" name="nama_lengkap" value="{{Auth::user()->name}}" required>
 							    @else
@@ -178,4 +178,15 @@
     </script>
 @endif
 @endif
+
+@if(Session::has('success'))
+<script>
+	Swal.fire(
+  	'Good job!',
+  	'Anda Sudah Order Paket Kami, Team Kami Akan Menghubungi anda',
+  	'success'
+)
+</script>
+@endif
+
 @endsection
