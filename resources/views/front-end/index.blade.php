@@ -186,67 +186,26 @@
 				@foreach ($categories as $item)
 				<div class="col-lg-3 col-md-6">	
 					<a href="{{url("/service-detail/$item->id")}}">
-					<div class="feature_item">
-						<img src="{{asset('/img/services/'.$item->image)}}" alt="" width="150px" height="150px">
-						<h4>{{$item->name}}</h4><label style="color: black">{{$item->title}}</label></p>
-					</div>
+						<div class="feature_item">
+							<img src="{{asset('/img/services/'.$item->image)}}" alt="" width="150px" height="150px">
+							<hr>
+							<h4>{{$item->name}}</h4>
+							<hr>
+							<label style="color: black">{{$item->title}}</label>
+							<hr>
+							<div  class="col-md-12">
+								<a href="{{url("/service-detail/$item->id")}}" class="primary_btn" >Order Now !!</a>
+							</div>
+						</div>
+						
 					</a>
+					
 				</div>
+				
 				@endforeach
-				{{-- <div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="{{asset('front-master/img/services/s2.png')}}" alt="">
-						<h4>UI/ux design</h4>
-						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="{{asset('front-master/img/services/s3.png')}}" alt="">
-						<h4>Web design</h4>
-						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="{{asset('front-master/img/services/s4.png')}}" alt="">
-						<h4>seo optimize</h4>
-						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-					</div>
-				</div> --}}
+				
 			</div>
-			{{-- <div class="row feature_inner">
-				<div class="col-lg-3 col-md-6">
-					<a href="{{url("/service-detail")}}">
-					<div class="feature_item">
-						<img src="{{asset('front-master/img/services/s1.png')}}" alt="">
-						<h4>Wp developing</h4>
-						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-					</div>
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="{{asset('front-master/img/services/s2.png')}}" alt="">
-						<h4>UI/ux design</h4>
-						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="{{asset('front-master/img/services/s3.png')}}" alt="">
-						<h4>Web design</h4>
-						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="{{asset('front-master/img/services/s4.png')}}" alt="">
-						<h4>seo optimize</h4>
-						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-					</div>
-				</div>
-			</div> --}}
+			
 		</div>
 	</section>
 	<!--================ End Features Area =================-->

@@ -77,7 +77,8 @@ class FrontEndController extends Controller
     public function serviceDetail($id)
     {
         $categories = Category::find($id);
-        return view('front-end.services-detail', compact('categories'));
+        $bannerCat = Category::where('id', $id)->first();
+        return view('front-end.services-detail', compact('categories', 'bannerCat'));
     }
 
     public function saveOrder(Request $request)
