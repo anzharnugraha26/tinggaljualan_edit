@@ -63,7 +63,7 @@
 							<li class="nav-item {{ '/' == request()->path()? 'active' : ''}}"><a class="nav-link" href="{{url("/")}}">Home</a></li>
 							{{-- <li class="nav-item {{ 'about' == request()->path()? 'active' : ''}}"><a class="nav-link" href="{{url('/about')}}" data-turbolinks="true">About</a></li> --}}
 							<li class="nav-item {{ 'services' == request()->path()? 'active' : ''}} {{ 'service-detail' == request()->path()? 'active' : ''}}"><a class="nav-link" href="{{url('/services')}}" data-turbolinks="true">Services</a></li>
-							<li class="nav-item"><a class="nav-link {{ 'portfolio' == request()->path()? 'active' : ''}}" href="{{url("/portfolio")}}">Portfolio</a></li>
+							<li class="nav-item {{ 'portfolio'  == request()->path()? 'active' : ''}}"><a class="nav-link" href="{{url("/portfolio")}}">Portfolio</a></li>
 							<li class="nav-item {{ 'blog'  == request()->path()? 'active' : ''}}
 								 {{ 'detail-blog'  == request()->path()? 'active' : ''}}"><a class="nav-link" href="{{url("/blog")}}">Blog</a></li>
 							<li class="nav-item {{ 'contact-us' == request()->path()? 'active' : ''}}"><a class="nav-link" href="{{url("/contact-us")}}">Contact</a></li>

@@ -79,7 +79,7 @@
 <!--================ End Features Area =================-->
 
 <!--================ Start Testimonial Area =================-->
-<div class="testimonial_area section_gap_bottom">
+{{-- <div class="testimonial_area section_gap_bottom">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
@@ -173,7 +173,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!--================ End Testimonial Area =================-->
 
 <!--================ Start Newsletter Area =================-->
