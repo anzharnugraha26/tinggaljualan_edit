@@ -187,14 +187,14 @@
 				<div class="col-lg-3 col-md-6">	
 					<a href="{{url("/service-detail/$item->id")}}">
 						<div class="feature_item">
-							<img src="{{asset('/img/services/'.$item->image)}}" alt="" width="150px" height="150px">
+							<img src="{{asset('/img/services/'.$item->image)}}" alt="" width="170px" height="400px">
+							{{-- <hr>
+							<h4>{{$item->name}}</h4> --}}
 							<hr>
-							<h4>{{$item->name}}</h4>
-							<hr>
-							<label style="color: black">{{$item->title}}</label>
-							<hr>
+							{{-- <label style="color: black">{{$item->title}}</label>
+							<hr> --}}
 							<div  class="col-md-12">
-								<a href="{{url("/service-detail/$item->id")}}" class="primary_btn" >Order Now !!</a>
+								<a href="{{url("/service-detail/$item->id")}}" class="btn btn primary_btn" >Order Now !!</a>
 							</div>
 						</div>
 						
