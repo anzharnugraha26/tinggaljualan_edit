@@ -95,11 +95,11 @@
                                     <option {{($categories->name) == 'Paket Starup Platinum' ? 'selected' : ''}} value="Paket Starup Platinum">Paket Starup Platinum</option>
                                     <option {{($categories->name) == 'Paket Website Company Profile' ? 'selected' : ''}} value="Paket Website Company Profile">Paket Website Company Profile</option>
                                     <option {{($categories->name) == 'Paket Website Toko Online' ? 'selected' : ''}} value="Paket Website Toko Online">Paket Website Toko Online</option>
-                                    <option {{($categories->name) == 'Logo & brand guide' ? 'selected' : ''}} value="Logo & brand guide">Logo & brand guide</option>
+                                    <option {{($categories->name) == 'Logo & brand guide' ? 'selected' : ''}} value="Logo & brand guide">Logo & Brand Guide</option>
                                     <option {{($categories->name) == 'Logo & Brand Identity Pack' ? 'selected' : ''}} value="Logo & Brand Identity Packe">Logo & Brand Identity Pack</option>
                                     <option {{($categories->name) == 'Photography Produk' ? 'selected' : ''}} value="Photography Produk">Photography Produk</option>
                                     <option {{($categories->name) == 'Videoshoot Produk' ? 'selected' : ''}} value="Videoshoot Produk">Videoshoot Produk</option>
-                                    <option {{($categories->name) == 'Media Promosi Digital' ? 'selected' : ''}} value="Media Promosi Digital">Videoshoot Produk</option>
+                                    <option {{($categories->name) == 'Media Promosi Digital' ? 'selected' : ''}} value="Media Promosi Digital">Media Promosi Digital</option>
                                 </select>
                             </div>
                             <div class="col" style="margin-top: 10px">

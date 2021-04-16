@@ -22,7 +22,7 @@
 								<a href="https://pesonamahameru.com/" target="_blank"><h4 style="color: white">by PT Pesona Mahameru</h4></a>
 								<div class="d-flex align-items-center" style="margin-top:15px">
 									
-									<a class="primary_btn tr-bg" href="/download-pdf"><span>Get Price List PDF</span></a>
+									<a class="primary_btn tr-bg" href="https://drive.google.com/file/d/1Kd3Lj6GjbyuKe16kBLnvMberdJX4yf-W/view"  target="_blank"><span>Get Price List PDF</span></a>
 								</div>
 							</div>
 						</div>
@@ -65,7 +65,7 @@
 							Kamu bingung mau Jualan apa ?
 							klik aja, tinggaljualan.com
 						</p>
-						<a class="primary_btn" href="{{url("/download-pdf")}}"><span>Get Price List PDF</span></a>
+						<a class="primary_btn" href="https://drive.google.com/file/d/1Kd3Lj6GjbyuKe16kBLnvMberdJX4yf-W/view"  target="_blank"><span>Get Price List PDF</span></a>
 					</div>
 				</div>
 			</div>
@@ -156,7 +156,7 @@
 							</div>
 							<div class="ml-15">
 								<p>call us now</p>
-								<h3>0877-1496-108</h3>
+								<h3>0877-1496-1087</h3>
 							</div>
 						</div>
 					</div>
@@ -175,9 +175,11 @@
 						<h2>Solusi Startup
 							ALL IN ONE!</h2>
 						<p>
-							Kami dapat membantu semua kebutuhan desain startup Anda yang dirangkum dalam 8 kategori.
-							{{-- Is give may shall likeness made yielding spirit a itself togeth created 
-							after sea <br> is in beast beginning signs open god you're gathering ithe --}}
+							Kami dapat membantu semua kebutuhan desain startup Anda yang dirangkum dalam 11 kategori.
+						</p>
+						<p>
+							Kami menjamin bahwa anda akan mendapatkan hasil yang bagus pada paket harga apapun. Kami akan membantu dengan mempersiapkan kebutuhan
+							marketing online anda hanya dengan klik tinggaljulan.com
 						</p>
 					</div>
 				</div>

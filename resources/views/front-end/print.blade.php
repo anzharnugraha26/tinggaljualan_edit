@@ -1,3 +1,4 @@
+<body background="{{asset('front-master/img/aa.png')}}">
 <div class="container">
     <div class="row">
             <table class="table">
@@ -35,3 +36,4 @@
        
     </div>
 </div>
+</body>

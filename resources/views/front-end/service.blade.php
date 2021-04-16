@@ -27,7 +27,11 @@
                 <div class="main_title">
                     <h2>SOLUSI STARTUP ALL IN ONE! </h2>
                     <p>
-                        Kami dapat membantu semua kebutuhan desain startup Anda yang dirangkum dalam 8 kategori.
+                        Kami dapat membantu semua kebutuhan desain startup Anda yang dirangkum dalam 11 kategori.
+                    </p>
+                    <p>
+                        Kami menjamin bahwa anda akan mendapatkan hasil yang bagus pada paket harga apapun. Kami akan membantu dengan mempersiapkan kebutuhan
+                        marketing online anda hanya dengan klik tinggaljulan.com
                     </p>
                 </div>
             </div>
