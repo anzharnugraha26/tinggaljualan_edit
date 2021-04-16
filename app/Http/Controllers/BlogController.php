@@ -79,9 +79,12 @@ class BlogController extends Controller
     // }
 
    
-    public function show($id)
+    public function findbyCategoryID($id)
     {
-        //
+        $categories = Post::where('category_id', $id)->get();
+        $catName = Post::where('category_id', $id)->first();
+        $cat = CategoryPost::all();
+        return view('front-end.blogcategory', compact('categories', 'cat', 'catName'));  
     }
 
     

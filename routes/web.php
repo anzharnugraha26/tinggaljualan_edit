@@ -22,6 +22,7 @@ Route::post('/saveSubs', 'FrontEndController@saveSubs');
 Route::post('/subIndex', 'FrontEndController@saveSubsIndex');
 Route::post('/sendcontact', 'FrontEndController@sendContact');
 Route::post('/sendComent', 'FrontEndController@sendComent');
+Route::get('/blog/category/{id}', 'BlogController@findbyCategoryID');
 
 
 Auth::routes(['verify' => true]);
