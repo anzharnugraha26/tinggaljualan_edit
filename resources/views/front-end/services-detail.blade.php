@@ -30,19 +30,13 @@
                         <img class="img-fluid" src="{{asset('img/services/'.$categories->icon_detail)}}" alt="">
                     </div>
                 </div>
-                <div class="offset-lg-1 col-lg-5" style="margin-top: -40px" >
+                <div class="offset-lg-1 col-lg-5"  >
                     <div class="portfolio_right_text mt-30" style="">
                         <h4 class="text-uppercase">{{$categories->name}}</h4>
                         <p>
                             {!!$categories->description!!}
                         </p>
-                        {{-- <ul class="list">
-                            <li><span>Rating</span>: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                    class="fa fa-star"></i></li>
-                            <li><span>Client</span>: colorlib</li>
-                            <li><span>Website</span>: colorlib.com</li>
-                            <li><span>Completed</span>: 17 Aug 2018</li>
-                        </ul> --}}
+                       
                     </div>
                 </div>
             </div>
@@ -101,6 +95,11 @@
                                     <option {{($categories->name) == 'Paket Starup Platinum' ? 'selected' : ''}} value="Paket Starup Platinum">Paket Starup Platinum</option>
                                     <option {{($categories->name) == 'Paket Website Company Profile' ? 'selected' : ''}} value="Paket Website Company Profile">Paket Website Company Profile</option>
                                     <option {{($categories->name) == 'Paket Website Toko Online' ? 'selected' : ''}} value="Paket Website Toko Online">Paket Website Toko Online</option>
+                                    <option {{($categories->name) == 'Logo & brand guide' ? 'selected' : ''}} value="Logo & brand guide">Logo & brand guide</option>
+                                    <option {{($categories->name) == 'Logo & Brand Identity Pack' ? 'selected' : ''}} value="Logo & Brand Identity Packe">Logo & Brand Identity Pack</option>
+                                    <option {{($categories->name) == 'Photography Produk' ? 'selected' : ''}} value="Photography Produk">Photography Produk</option>
+                                    <option {{($categories->name) == 'Videoshoot Produk' ? 'selected' : ''}} value="Videoshoot Produk">Videoshoot Produk</option>
+                                    <option {{($categories->name) == 'Media Promosi Digital' ? 'selected' : ''}} value="Media Promosi Digital">Videoshoot Produk</option>
                                 </select>
                             </div>
                             <div class="col" style="margin-top: 10px">

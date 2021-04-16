@@ -38,9 +38,12 @@
             <div class="col-lg-3 col-md-6">	
                 <a href="{{url("/service-detail/$item->id")}}">
                 <div class="feature_item">
-                    <img src="{{asset('/img/services/'.$item->image)}}" alt="" width="150px" height="150px">
-                 
-                    <h4>{{$item->name}}</h4><label style="color: black">Paket ini ditujukan bagi Anda yang baru memulai usaha. Anda akan mendapatkan logo, kartu nama, kop surat, dan lainnya.</label></p>
+                    <img src="{{asset('/img/services/'.$item->image)}}" alt="" width="170px" height="400px"> 
+                    {{-- <h4>{{$item->name}}</h4><label style="color: black">Paket ini ditujukan bagi Anda yang baru memulai usaha. Anda akan mendapatkan logo, kartu nama, kop surat, dan lainnya.</label></p> --}}
+                    <hr>						
+					<div  class="col-md-12">
+						<a href="{{url("/service-detail/$item->id")}}" class="btn btn primary_btn" >Order Now !!</a>
+					</div>
                 </div>
                 </a>
             </div>
