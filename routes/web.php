@@ -16,13 +16,14 @@ Route::get('/blog', 'FrontEndController@blog');
 Route::get('/contact-us', 'FrontEndController@contactUs');
 Route::get('/blog/{slug}', 'FrontEndController@detailBlog');
 Route::get('/portfolio', 'FrontEndController@portfolio');
-Route::get('download-pdf', 'HomeController@downloadPDF');
+Route::get('/download-pdf', 'HomeController@downloadPDF');
 Route::post('/saveorder', 'FrontEndController@saveOrder');
 Route::post('/saveSubs', 'FrontEndController@saveSubs');
 Route::post('/subIndex', 'FrontEndController@saveSubsIndex');
 Route::post('/sendcontact', 'FrontEndController@sendContact');
 Route::post('/sendComent', 'FrontEndController@sendComent');
 Route::get('/blog/category/{id}', 'BlogController@findbyCategoryID');
+Route::get('/download', 'HomeController@download');
 
 
 Auth::routes(['verify' => true]);

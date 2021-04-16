@@ -1,5 +1,5 @@
-<body background="{{asset('front-master/img/aa.png')}}">
-<div class="container">
+
+<div class="container" style="background-image: {{asset('front-master/img/aa.png')}} ">
     <div class="row">
             <table class="table">
                     <thead class="thead-dark">
@@ -36,4 +36,3 @@
        
     </div>
 </div>
-</body>

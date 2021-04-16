@@ -65,7 +65,7 @@
 							Kamu bingung mau Jualan apa ?
 							klik aja, tinggaljualan.com
 						</p>
-						<a class="primary_btn" href="https://drive.google.com/file/d/1Kd3Lj6GjbyuKe16kBLnvMberdJX4yf-W/view"  target="_blank"><span>Get Price List PDF</span></a>
+						<a class="primary_btn" href="/download"><span>Get Price List PDF</span></a>
 					</div>
 				</div>
 			</div>
