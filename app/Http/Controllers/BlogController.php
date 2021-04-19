@@ -65,19 +65,23 @@ class BlogController extends Controller
     
     public function edit($id)
     {
-        //
+        
     }
 
     
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
   
     public function destroy($id)
     {
-        Post::where(['id' => $id])->delete();
+        $post = Post::where(['id' => $id])->first();
+        $post->delete();
+        $categories =  CategoryPost::where('id', $post->category_id)->first();
+        $currentTotal = $categories->jumlah - 1 ;
+        $categories->update(array('jumlah' => $currentTotal));
         return redirect()->back();
     }
 }
