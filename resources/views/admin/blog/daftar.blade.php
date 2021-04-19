@@ -68,7 +68,7 @@
                     <td>{{$item->slug}}</td>
                                   
                   <td><a class="btn btn-info btn-sm" href="{{$item->id}}" style="margin-top: 10px"> <i class="fas fa-pencil-alt edit"></i> Edit</a>  <a class="btn btn-info btn-sm" href="{{$item->id}}" style="background:blue;margin-top: 10px"><i class="fas fa-eye"></i> View</a>
-                      <a class="btn btn-danger btn-sm" href="{{$item->id}}" style="margin-top: 10px"><i class="far fa-trash-alt"></i> Delete</a>
+                      <a class="btn btn-danger btn-sm delete" href="#" style="margin-top: 10px" id="{{$item->id}}"><i class="far fa-trash-alt"></i> Delete</a>
                   </td>
                 </tr>
                 @endforeach
@@ -197,6 +197,30 @@
 $(document).ready(function() {
   $('#tbl_order').DataTable();
 });
+
+$(document).ready(function() {
+  $('.delete').click(function() {
+    var karyawan_id = $(this).attr('id');
+    swal({
+    title: "Are you sure?",
+    text: "Are you sure you want to delete this data?",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+    })
+      .then((willDelete) => {
+        if (willDelete) {
+          window.location = "/delete-blog/" + karyawan_id  ;
+          swal("Poof! Your imaginary file has been deleted!", {
+          icon: "success",
+          });
+         } else {
+          swal("Your imaginary file is safe!");
+           }
+           });
+          });
+});
+
 </script>
     
 @endsection

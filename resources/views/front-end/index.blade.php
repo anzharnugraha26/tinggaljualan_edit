@@ -494,7 +494,7 @@
 	<!--================ End Testimonial Area =================-->
 
 	<!--================ Start Newsletter Area =================-->
-	<section class="newsletter_area">
+	<section class="newsletter_area" style="margin-top: 20px">
 		<div class="container">
 			<div class="row justify-content-center align-items-center">
 				<div class="col-lg-12">

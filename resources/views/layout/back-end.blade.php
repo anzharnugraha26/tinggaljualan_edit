@@ -33,6 +33,10 @@
   <link rel="stylesheet" href="{{asset('lte/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
   <link rel="stylesheet" href="{{asset('lte/plugins/select2/css/select2.min.css')}}">
   <link rel="stylesheet" href="{{asset('lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
+
+  {{-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>   --}}
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -79,7 +83,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       
-      <span class="brand-text font-weight-light"><img src="{{asset('front-master/img/xx.png')}}" ></span>
+      <span class="brand-text font-weight-light"><img src="{{asset('front-master/img/aa.png')}}" ></span>
     </a>
 
     <!-- Sidebar -->
@@ -220,6 +224,7 @@
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
 <script src="{{asset('lte/plugins/select2/js/select2.full.min.js')}}"></script>
+
 
 @yield('script')
 </body>

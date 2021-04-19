@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth', 'checkRole:admin']], function () {
     Route::post('/saveblog', 'BlogController@savePost');
     Route::post('/save/category', 'BlogController@saveCat');
     Route::post('/save/tag', 'BlogController@saveTag');
+    Route::get('/delete-blog/{id}', 'BlogController@destroy');
     Route::get('/admin/categories', 'BackEndController@categories');
     Route::get('/admin/categories/{id}', 'BackEndController@categoriesUpdate');
     Route::post('/admin/categories/update/{id}', 'BackEndController@update');
