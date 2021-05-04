@@ -111,9 +111,8 @@ class FrontEndController extends Controller
     public function sendComent(Request $request)
     {
         if (Auth::check()) {
-
             $jmlcoment = Post::where('id', $request->blog_id)->first();
-            $currentTotal = $jmlcoment->coment + 1; 
+            $currentTotal = $jmlcoment->coment + 1;
 
             ComentBlog::create($request->all());
             Post::where('id', $request->blog_id)->update(array('coment' => $currentTotal));

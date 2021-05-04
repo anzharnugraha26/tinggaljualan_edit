@@ -69,6 +69,7 @@
                             <a class="btn btn-link" href="{{url("/register")}}">
                                 Belum Punya Akun ? Silahkan register terlebih dahulu
                             </a>
+                            <a href="{{url("/auth/google")}}">Login With Google</a>
                             </div>
                         </div>
                     </form>

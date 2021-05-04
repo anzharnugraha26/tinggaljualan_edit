@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome');
 // });
 
+Route::get('auth/google', 'GoogleController@redirectToGoogle');
+Route::get('auth/google/callback', 'GoogleController@handleGoogleCallback');
+
 Route::get('/', 'FrontEndController@index');
 Route::get('/about', 'FrontEndController@about');
 Route::get('/services', 'FrontEndController@service');
