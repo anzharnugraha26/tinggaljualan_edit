@@ -555,6 +555,19 @@
 </script>
 @endif
 
+@if(Session::has('with'))
+
+<script>
+	Swal.fire(
+  	'Good job!',
+  	'Selamat Anda Berhasil Login',
+  	'success'
+)
+</script>
+
+@else
+
+
 @if(Auth::check())
 @if(Auth::user()->email_verified_at==null)
     <script>
@@ -566,6 +579,8 @@
         })
     </script>
 @endif
+@endif
+
 @endif
 
 @endsection

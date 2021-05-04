@@ -59,17 +59,21 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
+                                {{-- @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif
+                                @endif --}}
+                                {{-- <a class="btn btn-primary" href="{{url("/auth/google")}}">Login With Google</a> --}}
+                            </div>
+                            
+                            <div class="col-md-8 offset-md-4" style="margin-top: 20px">
+                                <a class="btn btn-primary" href="{{url("/auth/google")}}" style="background-color: white;"><img src="{{asset('img/google.png')}}">  <label style="color: black"> Login With Google</label></a>
                             </div>
                             <div class="col-md-8 offset-md-3">
-                            <a class="btn btn-link" href="{{url("/register")}}">
+                                <a class="btn btn-link" href="{{url("/register")}}">
                                 Belum Punya Akun ? Silahkan register terlebih dahulu
-                            </a>
-                            <a href="{{url("/auth/google")}}">Login With Google</a>
+                                </a>
                             </div>
                         </div>
                     </form>
