@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome');
 // });
 
+Route::get('test-regis', 'HomeController@testRegis');
+Route::get('test-login', 'HomeController@testLogin');
+
 Route::get('auth/google', 'GoogleController@redirectToGoogle');
 Route::get('auth/google/callback', 'GoogleController@handleGoogleCallback');
 
@@ -27,6 +30,9 @@ Route::post('/sendcontact', 'FrontEndController@sendContact');
 Route::post('/sendComent', 'FrontEndController@sendComent');
 Route::get('/blog/category/{id}', 'BlogController@findbyCategoryID');
 Route::get('/download', 'HomeController@download');
+
+Route::get('/test', 'HomeController@test');
+Route::post('/test', 'HomeController@save');
 
 
 Auth::routes(['verify' => true]);

@@ -17,8 +17,15 @@ class GoogleController extends Controller
     
     public function handleGoogleCallback()
     {
+
+
         $user = Socialite::driver('google')->user();
         $find = User::where('google_id', $user->getId())->first();
+        $date = User::get();
+        
+        if ($find = $date->email) {
+            return redirect('/');
+        }
         if ($find) {
             Auth::login($find);
             return redirect('/')->with('with','aa');
