@@ -569,6 +569,7 @@
 
 
 @if(Auth::check())
+
 @if(Auth::user()->email_verified_at==null)
     <script>
         Swal.fire({

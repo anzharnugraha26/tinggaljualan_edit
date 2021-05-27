@@ -17,50 +17,27 @@ class GoogleController extends Controller
     
     public function handleGoogleCallback()
     {
-
-
         $user = Socialite::driver('google')->user();
+        $duplicate = User::where('email', $user->email)->first();
         $find = User::where('google_id', $user->getId())->first();
-        $date = User::get();
-        
-        if ($find = $date->email) {
-            return redirect('/');
-        }
-        if ($find) {
-            Auth::login($find);
-            return redirect('/')->with('with','aa');
-        } else{
-             $new = User::create([
+        if ($duplicate) {
+            Auth::login($duplicate);
+            return redirect('/')->with('login', 'zz');
+        } else {
+            if ($find) {
+                Auth::login($find);
+                return redirect('/')->with('with', 'aa');
+            } else {
+                $new = User::create([
                      'name' => $user->name,
                      'email' => $user->email,
                      'google_id' => $user->id,
                      'password' => bcrypt('${1:my-secret-password')
             ]);
-            Auth::login($new);
-            return redirect('/')->with('with','aa');
+                Auth::login($new);
+                return redirect('/')->with('with', 'aa');
+            }
         }
-        // try{
-        //     $user = Socialite::driver('google')->user();
-        //     // dd($user);
-        //     $finduser = User::where('google_id', $user->getId())->first();
-        //     if ($finduser) {
-        //         Auth::login($finduser);
-        //         return redirect('/');
-        //     }
-        //     else{
-        //         $newuser = User::create([
-        //             'name' => $user->name,
-        //             'email' => $user->email,
-        //             'google_id' => $user->id,
-        //             'password' => bcrypt('${1:my-secret-password')
-        //         ]);
-        //         Auth::login($newuser);
-        //         return redirect('/');
-        //     }
-          
-        //     } catch(\Throwable $th){
-
-        //     }
     }
 
     /**
