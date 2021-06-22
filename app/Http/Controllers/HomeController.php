@@ -40,11 +40,7 @@ class HomeController extends Controller
     
     public function download()
     {
-        $myFile = public_path("1.pdf");
-        $headers = ['Content-Type: application/pdf'];
-        $newName = 'pricelist';
-
-        return response()->download($myFile, $newName, $headers);
+        return response()->download(public_path("pricelist.pdf"));
     }
 
     public function logout()

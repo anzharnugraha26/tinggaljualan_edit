@@ -65,7 +65,7 @@
 							Kamu bingung mau Jualan apa ?
 							klik aja, tinggaljualan.com
 						</p>
-						<a class="primary_btn" href="/download"><span>Get Price List PDF</span></a>
+						<a class="primary_btn" href="{{url("/download")}}"><span>Get Price List PDF</span></a>
 					</div>
 				</div>
 			</div>
