@@ -52,5 +52,8 @@ Route::group(['middleware' => ['auth', 'checkRole:admin']], function () {
     Route::get('/admin/categories', 'BackEndController@categories');
     Route::get('/admin/categories/{id}', 'BackEndController@categoriesUpdate');
     Route::post('/admin/categories/update/{id}', 'BackEndController@update');
+
+
+    Route::get('/admin/daftar-users', 'Admin\UserController@index');
 });
 Route::get('/logout', 'HomeController@logout');
