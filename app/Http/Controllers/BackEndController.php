@@ -7,14 +7,19 @@ use App\Blog\Post;
 use App\Category;
 use App\Contact;
 use App\Order;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BackEndController extends Controller
 {
 
     public function index()
     {
-        return view('admin.index');
+        $categories = Category::all();
+        $user = User::get();
+        // $getuser = $user->isOnline();
+        return view('admin.index', compact('categories', 'user'));
     }
 
 
