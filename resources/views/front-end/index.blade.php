@@ -51,12 +51,12 @@
 
 				<div class="offset-lg-1 col-lg-5">
 					<div class="main_title text-left">
-						<h3>Solusi Jasa Desain Startup Berkualitas!</h3>
+						<h3>@lang("home.judul")</h3>
 							<h2>All in One!</h2>
 						<p>
-							Digital marketing saat ini adalah strategi yang paling popular dan dipakai oleh nyaris seluruh marketers dunia. Hal ini merupakan efek dari perkembangan dunia internet dan teknologi yang begitu pesat, sehingga internet menjadi market yang paling menjanjikan dalam hal pemasaran.
+							@lang("home.isi")
 						</p>
-						<p>	Oleh karena itu, Kami tinggaljualan.com hadir sebagai solusi Anda, sebuah jasa yang berada dibawah naungan PT Pesona Mahameru ( <a href="https://pesonamahameru.com/" target="_blank">www.pesonamahameru.com</a> ). 
+						<p>	@lang('home.isi_2') ( <a href="https://pesonamahameru.com/" target="_blank">www.pesonamahameru.com</a> ). 
 							
 						</p>	
 						<p>	Tinggaljualan.com akan membantu semua kebutuhan anda dimulai dari pembuatan produk kecantikan sampai dengan mempersiapkan kebutuhan marketing online anda hanya dengan klik tinggaljualan.com.

@@ -33,6 +33,7 @@
 	<div class="main-top" style="font-size: 15px;">
             <div class="row">
                 <div class="right-phone-box">
+					<a href="{{url('/id')}}">Indonesia</a><a href="{{url('/en')}}">English</a>
 					<p>	@if (Auth::check()) 
 					<label style="color: white">Selamat Datang <i class="fa fa-user"> {{Auth::user()->name}} | </i></label>  
 					@else
@@ -81,6 +82,7 @@
 	</header>
 
     @yield('content')
+	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f3475065-45ae-4dae-961d-ab6316be6200";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
 
     <footer class="footer_area" style="">

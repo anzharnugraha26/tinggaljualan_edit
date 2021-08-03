@@ -11,6 +11,7 @@ use App\Contact;
 use App\Order;
 use App\Subscribe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use PDF;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,8 +22,9 @@ class FrontEndController extends Controller
     //     $this->middleware(['auth', 'verified']);
     // }
 
-    public function index()
+    public function index($bhs="")
     {
+        App::setLocale($bhs);
         $categories = Category::all();
         return view('front-end.index', compact('categories'));
     }
